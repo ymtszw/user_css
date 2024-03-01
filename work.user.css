@@ -5,7 +5,7 @@
 @author       ymtszw (https://ymtszw.cc)
 @homepageURL  https://github.com/ymtszw/user_css
 @updateURL    https://raw.githubusercontent.com/ymtszw/user_css/main/work.user.css
-@version      1.20240301.2
+@version      1.20240301.3
 @license      Unlicensed
 ==/UserStyle== */
 
@@ -97,5 +97,35 @@
     div {
     background-color: #cfd3dd;
     overflow: hidden;
+  }
+
+  /* リストカウンター */
+  ol#board > li {
+    /*
+      Trelloはボード→リスト→カードという層構造になっているので、ol#board直下のアイテム＝各Trelloリスト、ということになる。
+      各Trelloリストごとにカウンターリセットし、子孫のol[data-testid="list-cards"] > liごとにインクリメントすればすなわちカード枚数カウントになる。
+    */
+    counter-reset: card-counter;
+  }
+  ol#board > li ol[data-testid="list-cards"] > li {
+    counter-increment: card-counter;
+  }
+  ol#board > li::after {
+    /*
+      ol#board > liという各Trelloリストの「最大域」のafter疑似要素を使うことで、カウンター表示位置を最も柔軟に制御できる。
+    */
+    position: absolute;
+    top: 0;
+    content: counter(card-counter);
+    background-color: #d7fe74;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+    transform: translate(-7px, 7px);
   }
 }
