@@ -1,0 +1,31 @@
+/* ==UserStyle==
+@name         My UserCSS at home
+@description  My UserCSS at home
+@namespace    ymtszw
+@author       ymtszw (https://ymtszw.cc)
+@homepageURL  https://github.com/ymtszw/user_css
+@updateURL    https://raw.githubusercontent.com/ymtszw/user_css/main/home.user.css
+@version      1.20240301.1
+@license      Unlicensed
+==/UserStyle== */
+
+/*
+
+  GitHub
+
+*/
+@-moz-document domain("github.com") {
+  .blob-code-inner {
+    font-family: Cica !important;
+    font-size: 13px;
+  }
+
+  .markdown-body pre {
+    font-family: Cica !important;
+    line-height: 1.2 !important;
+  }
+
+  .markdown-body .highlight pre {
+    font-size: 100% !important;
+  }
+}
