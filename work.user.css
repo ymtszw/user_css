@@ -105,6 +105,7 @@
       ol#board > liという各Trelloリストの「最大域」の子要素を使うことで、カウンター表示位置を最も柔軟に制御できる。
       もともとCSS Counterでやろうとしていたが、ページ読み込み後に動的にTrelloリストやカードが編集された場合正しく再計算されなかったので、
       Tampermonkey scriptと協働し、カウンターの数字はscript側からinnerTextで注入することにした。
+      cf. https://github.com/ymtszw/user_scripts/blob/main/trello-forcibly-update-card-counter.user.js
     */
     position: absolute;
     top: 0;
