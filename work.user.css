@@ -9,6 +9,11 @@
 @license      Unlicensed
 ==/UserStyle== */
 
+/*
+
+  GitHub
+
+*/
 @-moz-document domain("github.com") {
   .blob-code-inner {
     font-family: Cica !important;
@@ -22,5 +27,75 @@
 
   .markdown-body .highlight pre {
     font-size: 100% !important;
+  }
+}
+
+/*
+
+  Slack
+
+*/
+@-moz-document domain("app.slack.com") {
+  .c-reaction {
+    background-color: #ffffffc7;
+  }
+  .c-reaction__count {
+    color: black;
+  }
+  .c-emoji__small {
+    width: 22px;
+    height: 22px;
+  }
+  [alt^=":dakoku"].c-emoji__small,
+  [alt^=":memo_remote_ok"].c-emoji__small,
+  [alt^=":switch_location_ok"].c-emoji__small {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/*
+
+  Trello
+
+*/
+@-moz-document domain("trello.com") {
+  /* カード詳細のカスタム */
+  @media screen and (min-width: 1280px) {
+    [role="dialog"]:has(.card-detail-window) {
+      width: 85vw;
+    }
+    .window-main-col {
+      width: 60vw;
+    }
+    .window-sidebar {
+      min-width: 220px;
+      width: 20vw;
+      max-width: 300px;
+    }
+  }
+
+  /* Doneリスト */
+  #board
+    > :has(
+      [data-testid="list-name-textarea"][aria-label*="Arc2" i],
+      [data-testid="list-name-textarea"][aria-label*="Done" i],
+      [data-testid="list-name-textarea"][aria-label*="完了" i]
+    )
+    > div {
+    background-color: #a6a9b3;
+  }
+  #board
+    > :has(
+      [data-testid="list-name-textarea"][aria-label*="Arc2" i],
+      [data-testid="list-name-textarea"][aria-label*="Done" i],
+      [data-testid="list-name-textarea"][aria-label*="完了" i]
+    )
+    > div
+    ol
+    li
+    div {
+    background-color: #cfd3dd;
+    overflow: hidden;
   }
 }
