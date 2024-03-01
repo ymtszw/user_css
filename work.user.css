@@ -10,11 +10,6 @@
 @preprocessor stylus
 ==/UserStyle== */
 
-/*
-
-  GitHub
-
-*/
 @-moz-document domain("github.com") {
   .blob-code-inner {
     font-family: Cica !important;
@@ -31,11 +26,6 @@
   }
 }
 
-/*
-
-  Slack
-
-*/
 @-moz-document domain("app.slack.com") {
   .c-reaction {
     background-color: #ffffffc7;
@@ -55,11 +45,6 @@
   }
 }
 
-/*
-
-  Trello
-
-*/
 @-moz-document domain("trello.com") {
   /* カード詳細のカスタム */
   @media screen and (min-width: 1280px) {
