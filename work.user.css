@@ -7,7 +7,6 @@
 @updateURL    https://raw.githubusercontent.com/ymtszw/user_css/main/work.user.css
 @version      1.0.0
 @license      Unlicensed
-@preprocessor stylus
 ==/UserStyle== */
 
 @-moz-document domain("github.com") {
