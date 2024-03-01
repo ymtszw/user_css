@@ -5,7 +5,7 @@
 @author       ymtszw (https://ymtszw.cc)
 @homepageURL  https://github.com/ymtszw/user_css
 @updateURL    https://raw.githubusercontent.com/ymtszw/user_css/main/work.user.css
-@version      1.20240301.3
+@version      1.20240301.4
 @license      Unlicensed
 ==/UserStyle== */
 
@@ -100,23 +100,14 @@
   }
 
   /* リスト内のカードカウンター */
-  ol#board > li {
+  ol#board > li > div.card-counter {
     /*
-      Trelloはボード→リスト→カードという層構造になっているので、ol#board直下のアイテム＝各Trelloリスト、ということになる。
-      各Trelloリストごとにカウンターリセットし、子孫のol[data-testid="list-cards"] > liごとにインクリメントすればすなわちカード枚数カウントになる。
-    */
-    counter-reset: card-counter;
-  }
-  ol#board > li ol[data-testid="list-cards"] > li {
-    counter-increment: card-counter;
-  }
-  ol#board > li::after {
-    /*
-      ol#board > liという各Trelloリストの「最大域」のafter疑似要素を使うことで、カウンター表示位置を最も柔軟に制御できる。
+      ol#board > liという各Trelloリストの「最大域」の子要素を使うことで、カウンター表示位置を最も柔軟に制御できる。
+      もともとCSS Counterでやろうとしていたが、ページ読み込み後に動的にTrelloリストやカードが編集された場合正しく再計算されなかったので、
+      Tampermonkey scriptと協働し、カウンターの数字はscript側からinnerTextで注入することにした。
     */
     position: absolute;
     top: 0;
-    content: counter(card-counter);
     background-color: #d7fe74;
     border-width: 1px;
     border-style: solid;
