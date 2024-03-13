@@ -29,3 +29,14 @@
     font-size: 100% !important;
   }
 }
+
+/*
+
+  Slack
+
+*/
+@-moz-document domain("app.slack.com") {
+  pre {
+    font-family: Cica !important;
+  }
+}

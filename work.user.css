@@ -52,6 +52,9 @@
     width: 16px;
     height: 16px;
   }
+  pre {
+    font-family: Cica !important;
+  }
 }
 
 /*
