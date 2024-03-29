@@ -5,7 +5,7 @@
 @author       ymtszw (https://ymtszw.cc)
 @homepageURL  https://github.com/ymtszw/user_css
 @updateURL    https://raw.githubusercontent.com/ymtszw/user_css/main/work.user.css
-@version      1.20240313.1
+@version      1.20240329.1
 @license      Unlicensed
 ==/UserStyle== */
 
@@ -37,20 +37,16 @@
 */
 @-moz-document domain("app.slack.com") {
   .c-reaction {
-    background-color: #ffffffc7;
+    background-color: #fff;
   }
   .c-reaction__count {
-    color: black;
+    color: #032a74;
   }
-  .c-emoji__small {
-    width: 22px;
-    height: 22px;
+  .c-reaction--reacted .c-reaction__count {
+    color: initial;
   }
-  [alt^=":dakoku"].c-emoji__small,
-  [alt^=":memo_remote_ok"].c-emoji__small,
-  [alt^=":switch_location_ok"].c-emoji__small {
-    width: 16px;
-    height: 16px;
+  pre {
+    font-family: Cica !important;
   }
   pre {
     font-family: Cica !important;
