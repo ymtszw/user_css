@@ -14,7 +14,7 @@
   Esa
 
 */
-@-moz-document regexp("[^.]+\.esa\.io") {
+@-moz-document domain("siiibo.esa.io"), domain("siiibo-shared.esa.io") {
   .layout-post__wrapper {
     width: 100%;
     padding: 0 30px;
