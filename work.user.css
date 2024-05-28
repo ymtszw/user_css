@@ -5,7 +5,7 @@
 @author       ymtszw (https://ymtszw.cc)
 @homepageURL  https://github.com/ymtszw/user_css
 @updateURL    https://raw.githubusercontent.com/ymtszw/user_css/main/work.user.css
-@version      1.20240528.1
+@version      1.20240528.2
 @license      Unlicensed
 ==/UserStyle== */
 
@@ -14,7 +14,7 @@
   Esa
 
 */
-@-moz-document domain("*.esa.io") {
+@-moz-document regexp("[^.]+\.esa\.io") {
   .layout-post__wrapper {
     width: 100%;
     padding: 0 30px;
