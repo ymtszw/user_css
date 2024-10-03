@@ -5,7 +5,7 @@
 @author       ymtszw (https://ymtszw.cc)
 @homepageURL  https://github.com/ymtszw/user_css
 @updateURL    https://raw.githubusercontent.com/ymtszw/user_css/main/work.user.css
-@version      1.20240714.1
+@version      1.20241003.1
 @license      Unlicensed
 ==/UserStyle== */
 
@@ -72,17 +72,13 @@
 */
 @-moz-document domain("trello.com") {
   /* カード詳細のカスタム */
-  @media screen and (min-width: 1280px) {
-    [role="dialog"]:has(.card-detail-window) {
+  @media screen and (min-width: 900px) {
+    [role="dialog"][data-testid="card-back-name"] {
       width: 85vw;
-    }
-    .window-main-col {
-      width: 60vw;
-    }
-    .window-sidebar {
-      min-width: 220px;
-      width: 20vw;
-      max-width: 300px;
+
+      & > div > div > div:nth-child(3) {
+        grid-template-columns: [main] 65vw [sidebar] minmax(0, 1fr);
+      }
     }
   }
 
