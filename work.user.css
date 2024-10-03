@@ -5,7 +5,7 @@
 @author       ymtszw (https://ymtszw.cc)
 @homepageURL  https://github.com/ymtszw/user_css
 @updateURL    https://raw.githubusercontent.com/ymtszw/user_css/main/work.user.css
-@version      1.20241003.1
+@version      1.20241003.2
 @license      Unlicensed
 ==/UserStyle== */
 
@@ -76,7 +76,7 @@
     [role="dialog"][data-testid="card-back-name"] {
       width: 85vw;
 
-      & > div > div > div:nth-child(3) {
+      & > div > div > div:not(:first-child) {
         grid-template-columns: [main] 65vw [sidebar] minmax(0, 1fr);
       }
     }
